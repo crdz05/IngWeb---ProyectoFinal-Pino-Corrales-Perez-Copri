@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar canción - App Musical</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="canciones.html" class="active">Canciones</a>
+            <a href="playlist.html">Playlist</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="ayuda.html">Ayuda</a>
+        </nav>
+        <div class="user-profile">
+            <div class="user-avatar"></div>
+            <span class="user-name">Usuario</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="index.html">Inicio</a>
+            <span>/</span>
+            <a href="canciones.html">Canciones</a>
+            <span>/</span>
+            <span class="current">Editar canción</span>
+        </nav>
+
+        <!-- Page Title -->
+        <h1 class="page-title">Editar canción</h1>
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <form class="song-form">
+                <!-- Título -->
+                <div class="form-group">
+                    <label for="titulo" class="form-label">Título</label>
+                    <input type="text" id="titulo" name="titulo" class="form-input" value="título de la canción">
+                </div>
+
+                <!-- Artista -->
+                <div class="form-group">
+                    <label for="artista" class="form-label">Artista</label>
+                    <input type="text" id="artista" name="artista" class="form-input" value="Nombre del artista">
+                </div>
+
+                <!-- Género -->
+                <div class="form-group">
+                    <label for="genero" class="form-label">Género</label>
+                    <select id="genero" name="genero" class="form-select form-select-filled">
+                        <option value="">Seleccione un género</option>
+                        <option value="rock-alternativo" selected>Rock alternativo</option>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="reggaeton">Reggaeton</option>
+                        <option value="electronica">Electrónica</option>
+                    </select>
+                </div>
+
+                <!-- Año -->
+                <div class="form-group">
+                    <label for="ano" class="form-label">Año</label>
+                    <input type="text" id="ano" name="ano" class="form-input" value="2000">
+                </div>
+
+                <!-- Álbum -->
+                <div class="form-group">
+                    <label for="album" class="form-label">Álbum</label>
+                    <input type="text" id="album" name="album" class="form-input" value="Nombre del Álbum">
+                </div>
+
+                <!-- Duración -->
+                <div class="form-group">
+                    <label for="duracion" class="form-label">Duración</label>
+                    <input type="text" id="duracion" name="duracion" class="form-input" value="03:58">
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="window.location.href='canciones.html'">Cancelar</button>
+                    <button type="submit" class="btn-submit">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Ingeniería Web
+    </footer>
+</body>
+</html>

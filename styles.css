@@ -443,3 +443,214 @@ footer {
 .song-card-actions button {
     flex: 1;
 }
+
+/* Form Styles */
+.form-container {
+    max-width: 750px;
+    margin: 40px auto;
+}
+
+.song-form {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.form-input::placeholder {
+    color: #999;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.form-select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #999;
+    background-color: #fff;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23333' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+    transition: border-color 0.3s;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #999;
+    color: #333;
+}
+
+.form-select-filled {
+    color: #333;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: flex-end;
+}
+
+.btn-cancel {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-cancel:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-submit {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #000;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+.modal-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.modal-text {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.modal-warning {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-danger {
+    flex: 1;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-cancel-modal {
+    flex: 1;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-cancel-modal:hover {
+    background-color: #000;
+}

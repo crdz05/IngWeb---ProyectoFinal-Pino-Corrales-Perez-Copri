@@ -92,8 +92,8 @@
                 <p class="song-card-artist">Artista</p>
                 <p class="song-card-info">Género - año</p>
                 <div class="song-card-actions">
-                    <button class="btn-outline">Eliminar</button>
-                    <button class="btn-dark">Editar</button>
+                    <button class="btn-outline" onclick="openDeleteModal()">Eliminar</button>
+                    <button class="btn-dark" onclick="window.location.href='editar-cancion.html'">Editar</button>
                 </div>
             </div>
 
@@ -157,5 +157,49 @@
     <footer>
         © 2025 Ingeniería Web
     </footer>
+
+    <!-- Modal de Confirmación de Eliminación -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeDeleteModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            
+            <h2 class="modal-title">Confirmar Eliminación</h2>
+            <p class="modal-text">¿Está seguro que desea eliminar la canción?</p>
+            <p class="modal-warning">Esta acción no se puede deshacer.</p>
+            
+            <div class="modal-actions">
+                <button class="btn-danger" onclick="confirmDelete()">Eliminar</button>
+                <button class="btn-cancel-modal" onclick="closeDeleteModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openDeleteModal() {
+            document.getElementById('deleteModal').style.display = 'flex';
+        }
+
+        function closeDeleteModal() {
+            document.getElementById('deleteModal').style.display = 'none';
+        }
+
+        function confirmDelete() {
+            // Aquí iría la lógica para eliminar la canción
+            alert('Canción eliminada');
+            closeDeleteModal();
+        }
+
+        // Cerrar modal al hacer clic fuera de él
+        window.onclick = function(event) {
+            const modal = document.getElementById('deleteModal');
+            if (event.target === modal) {
+                closeDeleteModal();
+            }
+        }
+    </script>
 </body>
 </html>
