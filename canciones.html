@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Canciones - App Musical</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="canciones.html" class="active">Canciones</a>
+            <a href="playlist.html">Playlist</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="ayuda.html">Ayuda</a>
+        </nav>
+        <div class="user-profile">
+            <div class="user-avatar"></div>
+            <span class="user-name">Usuario</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="index.html">Inicio</a>
+            <span>/</span>
+            <a href="canciones.html">Canciones</a>
+            <span>/</span>
+            <span class="current">Ver canciones</span>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">Ver Canciones</h1>
+            <button class="btn-primary" onclick="window.location.href='agregar-cancion.html'">
+                <img src="icons/plus.svg" alt="Agregar" class="icon">
+                Agregar canción
+            </button>
+        </div>
+
+        <!-- Search and Filters -->
+        <div class="search-filters">
+            <div class="search-bar">
+                <input type="text" placeholder="Value" class="search-input">
+                <button class="search-icon">
+                    <img src="icons/search.svg" alt="Buscar" class="icon">
+                </button>
+            </div>
+            <button class="btn-secondary">Aplicar filtros</button>
+        </div>
+
+        <!-- Filter Dropdowns -->
+        <div class="filters-row">
+            <div class="filter-group">
+                <label>Género</label>
+                <select class="filter-select">
+                    <option>Todos</option>
+                    <option>Rock</option>
+                    <option>Pop</option>
+                    <option>Jazz</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Artista</label>
+                <select class="filter-select">
+                    <option>Todos</option>
+                    <option>Artista 1</option>
+                    <option>Artista 2</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Año</label>
+                <select class="filter-select">
+                    <option>Todos</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                    <option>2022</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Songs Grid -->
+        <div class="songs-grid">
+            <div class="song-card">
+                <div class="song-card-image"></div>
+                <h3 class="song-card-title">Canción</h3>
+                <p class="song-card-artist">Artista</p>
+                <p class="song-card-info">Género - año</p>
+                <div class="song-card-actions">
+                    <button class="btn-outline">Eliminar</button>
+                    <button class="btn-dark">Editar</button>
+                </div>
+            </div>
+
+            <div class="song-card">
+                <div class="song-card-image"></div>
+                <h3 class="song-card-title">Canción</h3>
+                <p class="song-card-artist">Artista</p>
+                <p class="song-card-info">Género - año</p>
+                <div class="song-card-actions">
+                    <button class="btn-outline">Eliminar</button>
+                    <button class="btn-dark">Editar</button>
+                </div>
+            </div>
+
+            <div class="song-card">
+                <div class="song-card-image"></div>
+                <h3 class="song-card-title">Canción</h3>
+                <p class="song-card-artist">Artista</p>
+                <p class="song-card-info">Género - año</p>
+                <div class="song-card-actions">
+                    <button class="btn-outline">Eliminar</button>
+                    <button class="btn-dark">Editar</button>
+                </div>
+            </div>
+
+            <div class="song-card">
+                <div class="song-card-image"></div>
+                <h3 class="song-card-title">Canción</h3>
+                <p class="song-card-artist">Artista</p>
+                <p class="song-card-info">Género - año</p>
+                <div class="song-card-actions">
+                    <button class="btn-outline">Eliminar</button>
+                    <button class="btn-dark">Editar</button>
+                </div>
+            </div>
+
+            <div class="song-card">
+                <div class="song-card-image"></div>
+                <h3 class="song-card-title">Canción</h3>
+                <p class="song-card-artist">Artista</p>
+                <p class="song-card-info">Género - año</p>
+                <div class="song-card-actions">
+                    <button class="btn-outline">Eliminar</button>
+                    <button class="btn-dark">Editar</button>
+                </div>
+            </div>
+
+            <div class="song-card">
+                <div class="song-card-image"></div>
+                <h3 class="song-card-title">Canción</h3>
+                <p class="song-card-artist">Artista</p>
+                <p class="song-card-info">Género - año</p>
+                <div class="song-card-actions">
+                    <button class="btn-outline">Eliminar</button>
+                    <button class="btn-dark">Editar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Ingeniería Web
+    </footer>
+</body>
+</html>
