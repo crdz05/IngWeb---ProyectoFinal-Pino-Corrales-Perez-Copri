@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Nueva Playlist - App Musical</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="canciones.html">Canciones</a>
+            <a href="playlist.html" class="active">Playlist</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="ayuda.html">Ayuda</a>
+        </nav>
+        <div class="user-profile">
+            <div class="user-avatar"></div>
+            <span class="user-name">Usuario</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="index.html">Inicio</a>
+            <span>/</span>
+            <a href="canciones.html">Canciones</a>
+            <span>/</span>
+            <span class="current">Crear Playlist</span>
+        </nav>
+
+        <!-- Page Title -->
+        <h1 class="page-title">Crear Nueva Playlist</h1>
+
+        <!-- Form Container -->
+        <div class="form-container-center">
+            <form class="playlist-form">
+                <!-- Nombre -->
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Nombre de la playlist">
+                </div>
+
+                <!-- Descripción -->
+                <div class="form-group">
+                    <label for="descripcion" class="form-label">Descripción</label>
+                    <textarea id="descripcion" name="descripcion" class="form-textarea" rows="4" placeholder="Descripción de la playlist (opcional)"></textarea>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="window.location.href='playlist.html'">Cancelar</button>
+                    <button type="submit" class="btn-submit">Crear Playlist</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Ingeniería Web
+    </footer>
+</body>
+</html>
