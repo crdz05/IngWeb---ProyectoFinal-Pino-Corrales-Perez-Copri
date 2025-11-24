@@ -9,6 +9,7 @@
 <body>
     <header>
         <div class="logo"></div>
+
         <nav>
             <a href="index.html">Inicio</a>
             <a href="canciones.html">Canciones</a>
@@ -16,10 +17,18 @@
             <a href="perfil.html">Perfil</a>
             <a href="ayuda.html" class="active">Ayuda</a>
         </nav>
-        <a href="perfil.html" class="user-profile" aria-label="Ir a mi perfil">
-            <div class="user-avatar" aria-hidden="true"></div>
-            <span class="user-name">Usuario</span>
-        </a>
+
+        <!-- USER DROPDOWN MENU -->
+        <div class="user-menu-container">
+            <div class="user-profile" onclick="toggleUserMenu()">
+                <div class="user-avatar"></div>
+                <span class="user-name">Usuario</span>
+            </div>
+
+            <div id="userDropdown" class="user-dropdown">
+                <a href="perfil.html">Editar Perfil</a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -97,7 +106,7 @@
                     Para soporte técnico o dudas relacionadas al proyecto, puedes comunicarte con el 
                     equipo responsable del curso de <strong>Ingeniería Web</strong>.
                 </p>
-                <br>
+
                 <ul class="contact-list">
                     <li><strong>Correo:</strong> Grupo9@Ingweb.com</li>
                     <li><strong>Grupo:</strong> Proyecto Final - Grupo 9</li>
@@ -110,6 +119,23 @@
     <footer>
         © 2025 Ingeniería Web - Proyecto Final Grupo 9
     </footer>
+
+    <!-- USER DROPDOWN SCRIPT -->
+    <script>
+        function toggleUserMenu() {
+            const menu = document.getElementById("userDropdown");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+
+        document.addEventListener("click", function(event) {
+            const userMenu = document.querySelector(".user-menu-container");
+            const dropdown = document.getElementById("userDropdown");
+
+            if (!userMenu.contains(event.target)) {
+                dropdown.style.display = "none";
+            }
+        });
+    </script>
 
 </body>
 </html>

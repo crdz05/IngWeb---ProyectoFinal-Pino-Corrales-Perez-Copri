@@ -16,9 +16,16 @@
             <a href="perfil.html">Perfil</a>
             <a href="ayuda.html">Ayuda</a>
         </nav>
-        <div class="user-profile">
-            <div class="user-avatar"></div>
-            <span class="user-name">Usuario</span>
+        <!-- USER DROPDOWN MENU -->
+        <div class="user-menu-container">
+            <div class="user-profile" onclick="toggleUserMenu()">
+                <div class="user-avatar"></div>
+                <span class="user-name">Usuario</span>
+            </div>
+
+            <div id="userDropdown" class="user-dropdown">
+                <a href="perfil.html">Editar Perfil</a>
+            </div>
         </div>
     </header>
 
@@ -201,5 +208,23 @@
             }
         }
     </script>
+    
+    <!-- USER DROPDOWN SCRIPT -->
+    <script>
+        function toggleUserMenu() {
+            const menu = document.getElementById("userDropdown");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+
+        document.addEventListener("click", function(event) {
+            const userMenu = document.querySelector(".user-menu-container");
+            const dropdown = document.getElementById("userDropdown");
+
+            if (!userMenu.contains(event.target)) {
+                dropdown.style.display = "none";
+            }
+        });
+    </script>
+
 </body>
 </html>
