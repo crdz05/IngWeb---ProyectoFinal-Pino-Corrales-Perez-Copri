@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - App Musical</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="canciones.html">Canciones</a>
+            <a href="playlist.html">Playlist</a>
+            <a href="perfil.html" class="active">Perfil</a>
+            <a href="ayuda.html">Ayuda</a>
+        </nav>
+        <div class="user-profile">
+            <div class="user-avatar"></div>
+            <span class="user-name">Usuario</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="index.html">Inicio</a>
+            <span>/</span>
+            <span class="current">Perfil</span>
+        </nav>
+
+        <!-- Page Title -->
+        <h1 class="page-title">Mi Perfil</h1>
+
+        <!-- Profile Container -->
+        <div class="form-container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-avatar-large"></div>
+                <button class="btn-secondary" style="margin-top: 15px;">Cambiar foto</button>
+            </div>
+
+            <!-- Profile Form -->
+            <form class="profile-form">
+                <!-- Nombre de usuario -->
+                <div class="form-group">
+                    <label for="username" class="form-label">Nombre de usuario</label>
+                    <input type="text" id="username" name="username" class="form-input" value="Usuario">
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" id="email" name="email" class="form-input" value="usuario@ejemplo.com">
+                </div>
+
+                <!-- Nombre completo -->
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Nombre completo</label>
+                    <input type="text" id="fullname" name="fullname" class="form-input" value="Nombre Apellido">
+                </div>
+
+                <!-- Fecha de nacimiento -->
+                <div class="form-group">
+                    <label for="birthdate" class="form-label">Fecha de nacimiento</label>
+                    <input type="date" id="birthdate" name="birthdate" class="form-input" value="2000-01-01">
+                </div>
+
+                <!-- País -->
+                <div class="form-group">
+                    <label for="country" class="form-label">País</label>
+                    <select id="country" name="country" class="form-select form-select-filled">
+                        <option value="">Seleccione un país</option>
+                        <option value="panama" selected>Panamá</option>
+                        <option value="mexico">México</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="españa">España</option>
+                    </select>
+                </div>
+
+                <!-- Separator -->
+                <hr class="form-separator">
+
+                <!-- Cambiar contraseña -->
+                <h3 class="section-subtitle">Cambiar contraseña</h3>
+
+                <div class="form-group">
+                    <label for="current-password" class="form-label">Contraseña actual</label>
+                    <input type="password" id="current-password" name="current-password" class="form-input" placeholder="Ingrese su contraseña actual">
+                </div>
+
+                <div class="form-group">
+                    <label for="new-password" class="form-label">Nueva contraseña</label>
+                    <input type="password" id="new-password" name="new-password" class="form-input" placeholder="Ingrese su nueva contraseña">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password" class="form-label">Confirmar nueva contraseña</label>
+                    <input type="password" id="confirm-password" name="confirm-password" class="form-input" placeholder="Confirme su nueva contraseña">
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="window.location.href='index.html'">Cancelar</button>
+                    <button type="submit" class="btn-submit">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="form-container" style="margin-top: 30px;">
+            <div class="stats-container">
+                <h2 class="section-subtitle">Estadísticas</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">Canciones</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Playlists</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">48h</div>
+                        <div class="stat-label">Tiempo de escucha</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Ingeniería Web - Proyecto Final Grupo 9
+    </footer>
+</body>
+</html>

@@ -38,6 +38,7 @@ nav a {
     font-size: 14px;
     font-weight: 400;
     transition: color 0.3s;
+    cursor: pointer;
 }
 
 nav a:hover {
@@ -653,4 +654,260 @@ footer {
 
 .btn-cancel-modal:hover {
     background-color: #000;
+}
+
+/* Playlists Grid */
+.playlists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.playlist-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 20px;
+    transition: box-shadow 0.3s;
+}
+
+.playlist-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.playlist-card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #d9d9d9;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.playlist-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.playlist-card-count {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-add-song {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.btn-add-song:hover {
+    background-color: #000;
+}
+
+.btn-add-song .icon {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+}
+
+.playlist-card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.playlist-card-actions button {
+    flex: 1;
+}
+
+/* Playlist Form Styles */
+.form-container-center {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.playlist-form {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 50px;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+.form-textarea::placeholder {
+    color: #999;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #999;
+}
+
+/* Edit Playlist Form Styles */
+.form-container-wide {
+    max-width: 950px;
+    margin: 40px auto;
+}
+
+.edit-playlist-form {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 40px 50px;
+}
+
+.form-separator {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 30px 0;
+}
+
+.songs-list-section {
+    margin-bottom: 30px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.playlist-songs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.playlist-song-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.playlist-song-item:hover {
+    background-color: #f9f9f9;
+}
+
+.playlist-song-info {
+    flex: 1;
+}
+
+.playlist-song-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.playlist-song-details {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+.btn-remove {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: color 0.3s;
+}
+
+.btn-remove:hover {
+    color: #c82333;
+}
+
+/* Profile Page Styles */
+.profile-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.profile-avatar-large {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    margin: 0 auto;
+}
+
+.profile-form {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 40px;
+}
+
+/* Statistics Styles */
+.stats-container {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
 }
