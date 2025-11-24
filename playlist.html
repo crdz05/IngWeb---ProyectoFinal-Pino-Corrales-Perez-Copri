@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Playlists - App Musical</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="canciones.html">Canciones</a>
+            <a href="playlist.html" class="active">Playlist</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="ayuda.html">Ayuda</a>
+        </nav>
+        <div class="user-profile">
+            <div class="user-avatar"></div>
+            <span class="user-name">Usuario</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="index.html">Inicio</a>
+            <span>/</span>
+            <a href="playlist.html">Playlist</a>
+            <span>/</span>
+            <span class="current">Ver playlists</span>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">Mis Playlists</h1>
+            <button class="btn-primary" onclick="window.location.href='crear-playlist.html'">
+                <img src="icons/plus.svg" alt="Agregar" class="icon">
+                Nueva Playlist
+            </button>
+        </div>
+
+        <!-- Playlists Grid -->
+        <div class="playlists-grid">
+            <div class="playlist-card">
+                <div class="playlist-card-image"></div>
+                <h3 class="playlist-card-title">Lista de reproducción</h3>
+                <p class="playlist-card-count">11 canciones</p>
+                <button class="btn-add-song">
+                    <img src="icons/plus.svg" alt="Agregar" class="icon">
+                    Agregar canción
+                </button>
+                <div class="playlist-card-actions">
+                    <button class="btn-outline" onclick="openDeletePlaylistModal()">Eliminar</button>
+                    <button class="btn-dark" onclick="window.location.href='editar-playlist.html'">Editar</button>
+                </div>
+            </div>
+
+            <div class="playlist-card">
+                <div class="playlist-card-image"></div>
+                <h3 class="playlist-card-title">Lista de reproducción</h3>
+                <p class="playlist-card-count">11 canciones</p>
+                <button class="btn-add-song">
+                    <img src="icons/plus.svg" alt="Agregar" class="icon">
+                    Agregar canción
+                </button>
+                <div class="playlist-card-actions">
+                    <button class="btn-outline" onclick="openDeletePlaylistModal()">Eliminar</button>
+                    <button class="btn-dark" onclick="window.location.href='editar-playlist.html'">Editar</button>
+                </div>
+            </div>
+
+            <div class="playlist-card">
+                <div class="playlist-card-image"></div>
+                <h3 class="playlist-card-title">Lista de reproducción</h3>
+                <p class="playlist-card-count">11 canciones</p>
+                <button class="btn-add-song">
+                    <img src="icons/plus.svg" alt="Agregar" class="icon">
+                    Agregar canción
+                </button>
+                <div class="playlist-card-actions">
+                    <button class="btn-outline" onclick="openDeletePlaylistModal()">Eliminar</button>
+                    <button class="btn-dark" onclick="window.location.href='editar-playlist.html'">Editar</button>
+                </div>
+            </div>
+
+            <div class="playlist-card">
+                <div class="playlist-card-image"></div>
+                <h3 class="playlist-card-title">Lista de reproducción</h3>
+                <p class="playlist-card-count">11 canciones</p>
+                <button class="btn-add-song">
+                    <img src="icons/plus.svg" alt="Agregar" class="icon">
+                    Agregar canción
+                </button>
+                <div class="playlist-card-actions">
+                    <button class="btn-outline" onclick="openDeletePlaylistModal()">Eliminar</button>
+                    <button class="btn-dark" onclick="window.location.href='editar-playlist.html'">Editar</button>
+                </div>
+            </div>
+
+            <div class="playlist-card">
+                <div class="playlist-card-image"></div>
+                <h3 class="playlist-card-title">Lista de reproducción</h3>
+                <p class="playlist-card-count">11 canciones</p>
+                <button class="btn-add-song">
+                    <img src="icons/plus.svg" alt="Agregar" class="icon">
+                    Agregar canción
+                </button>
+                <div class="playlist-card-actions">
+                    <button class="btn-outline" onclick="openDeletePlaylistModal()">Eliminar</button>
+                    <button class="btn-dark" onclick="window.location.href='editar-playlist.html'">Editar</button>
+                </div>
+            </div>
+
+            <div class="playlist-card">
+                <div class="playlist-card-image"></div>
+                <h3 class="playlist-card-title">Lista de reproducción</h3>
+                <p class="playlist-card-count">11 canciones</p>
+                <button class="btn-add-song">
+                    <img src="icons/plus.svg" alt="Agregar" class="icon">
+                    Agregar canción
+                </button>
+                <div class="playlist-card-actions">
+                    <button class="btn-outline" onclick="openDeletePlaylistModal()">Eliminar</button>
+                    <button class="btn-dark" onclick="window.location.href='editar-playlist.html'">Editar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Ingeniería Web
+    </footer>
+
+    <!-- Modal de Confirmación de Eliminación de Playlist -->
+    <div id="deletePlaylistModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeDeletePlaylistModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            
+            <h2 class="modal-title">Confirmar Eliminación</h2>
+            <p class="modal-text">¿Está seguro que desea eliminar la playlist?</p>
+            <p class="modal-warning">Esta acción eliminará la lista de reproducción pero no las canciones.</p>
+            
+            <div class="modal-actions">
+                <button class="btn-danger" onclick="confirmDeletePlaylist()">Eliminar</button>
+                <button class="btn-cancel-modal" onclick="closeDeletePlaylistModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openDeletePlaylistModal() {
+            document.getElementById('deletePlaylistModal').style.display = 'flex';
+        }
+
+        function closeDeletePlaylistModal() {
+            document.getElementById('deletePlaylistModal').style.display = 'none';
+        }
+
+        function confirmDeletePlaylist() {
+            // Aquí iría la lógica para eliminar la playlist
+            alert('Playlist eliminada');
+            closeDeletePlaylistModal();
+        }
+
+        // Cerrar modal al hacer clic fuera de él
+        window.onclick = function(event) {
+            const modal = document.getElementById('deletePlaylistModal');
+            if (event.target === modal) {
+                closeDeletePlaylistModal();
+            }
+        }
+    </script>
+</body>
+</html>
