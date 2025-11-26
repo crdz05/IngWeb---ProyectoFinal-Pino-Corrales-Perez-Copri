@@ -432,7 +432,7 @@ footer {
 
 .song-card-info {
     font-size: 13px;
-    color: #999;
+    color: #666;
     margin-bottom: 15px;
 }
 
@@ -948,4 +948,63 @@ footer {
     align-items: center;
     gap: 10px;
     cursor: pointer;
+}
+
+/* Navegación principal - Estilo Spotify con paleta blanca */
+nav {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Estilo de los items de navegación */
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 24px;
+    transition: all 0.3s cubic-bezier(0.3, 0, 0.4, 1);
+    display: inline-block;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Hover state - pastilla gris claro */
+nav a:hover {
+    background-color: #f5f5f5;
+    color: #333;
+    transform: scale(1.02);
+}
+
+/* Active state - pastilla celeste con letra negra */
+nav a.active {
+    background-color: #89CFF0;
+    color: #000;
+    font-weight: 600;
+}
+
+nav a.active:hover {
+    background-color: #6FB8E0;
+}
+
+/* Efecto de brillo sutil en hover */
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.03) 0%, transparent 70%);
+}
+
+nav a:hover::before {
+    opacity: 1;
 }
